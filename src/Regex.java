@@ -2,6 +2,9 @@ import java.util.regex.Pattern;
 
 public class Regex {
     public static void main(String[] args) {
+        String email = "example@example.com";
+        String invalidEmail = "NOOOOOOOO";
+
         String phoneNumber = "(123) 456-7890";
         String invalidPhoneNumber = "123-456-7890";
 
@@ -26,27 +29,30 @@ public class Regex {
         String time = "12:30";
         String invalidTime = "25:00";
 
+        System.out.println("Valid email: " + isValidEmail(email));
+        System.out.println("Invalid email: " + isValidEmail(invalidEmail));
+        System.out.println();
         System.out.println("Valid Phone Number: " + isValidPhone(phoneNumber));
         System.out.println("Invalid Phone Number: " + isValidPhone(invalidPhoneNumber));
-
+        System.out.println();
         System.out.println("Valid Date: " + isValidDate(date));
         System.out.println("Invalid Date: " + isValidDate(invalidDate));
-
+        System.out.println();
         System.out.println("Valid URL: " + isValidUrl(url));
         System.out.println("Invalid URL: " + isValidUrl(invalidURL));
-
+        System.out.println();
         System.out.println("Valid Credit Card Number: " + isValidCard(creditCardNumber));
         System.out.println("Invalid Credit Card Number: " + isValidCard(invalidCreditCardNumber));
-
+        System.out.println();
         System.out.println("Valid Zip Code: " + isValidZip(zipCode));
         System.out.println("Invalid Zip Code: " + isValidZip(invalidZipCode));
-
+        System.out.println();
         System.out.println("Valid Java Identifier: " + isValidJava(javaIdentifier));
         System.out.println("Invalid Java Identifier: " + isValidJava(invalidJavaIdentifier));
-
+        System.out.println();
         System.out.println("Valid Hexadecimal Color Code: " + isValidHex(hexColorCode));
         System.out.println("Invalid Hexadecimal Color Code: " + isValidHex(invalidHexColorCode));
-
+        System.out.println();
         System.out.println("Valid Time: " + isValidTime(time));
         System.out.println("Invalid Time: " + isValidTime(invalidTime));
     }
